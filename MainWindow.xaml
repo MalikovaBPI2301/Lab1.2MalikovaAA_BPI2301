@@ -6,7 +6,29 @@
         xmlns:local="clr-namespace:Lab1._2MalikovaAA_BPI2301"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Значение x: " VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox x:Name="txtX" Width="100" Text="1.0" Margin="0,0,10,0"/>
+            <Button x:Name="btnCalculate" Content="Вычислить" Click="BtnCalculate_Click" Margin="0,0,10,0"/>
+            <Button x:Name="btnDerivatives" Content="Производные" Click="BtnDerivatives_Click" Margin="0,0,10,0"/>
+            <Button x:Name="btnTestAll" Content="Тест всех методов" Click="BtnTestAll_Click"/>
+        </StackPanel>
+
+        <TextBox x:Name="txtResults" Grid.Row="1" IsReadOnly="True" 
+                 VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                 FontFamily="Consolas" FontSize="12"/>
+
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>
+                <TextBlock x:Name="statusText" Text="Готово"/>
+            </StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>
