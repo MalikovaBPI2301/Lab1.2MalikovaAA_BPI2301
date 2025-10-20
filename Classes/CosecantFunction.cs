@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab1._2MalikovaAA_BPI2301.Classes
 {
-    public interface IFunction
+    internal class CosecantFunction
     {
-        double Calculate(double x);
-        IFunction GetDerivative();
-        string ToString();
-
     }
 }
